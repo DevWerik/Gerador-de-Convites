@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Gerador de Convites</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -21,7 +23,9 @@
         class="card section-info-evento"
         aria-labelledby="info-evento-title"
       >
-        <h2 id="info-evento-title">Informações do Evento</h2>
+        <h2 id="info-evento-title" class="section-title">
+          Informações do Evento
+        </h2>
 
         <form id="form-convite" aria-describedby="info-evento-desc">
           <p id="info-evento-desc" class="sr-only">
@@ -34,29 +38,28 @@
               id="nomeEvento"
               name="nomeEvento"
               type="text"
-              value="Minha Festa Especial"
+              placeholder="Digite o nome do evento"
             />
           </div>
 
           <div class="form-row form-row--grid">
-            <div>
-              <label for="dataEvento">Data</label>
-              <input
-                id="dataEvento"
-                name="dataEvento"
-                type="date"
-                value="2024-12-31"
-              />
-            </div>
-            <div>
-              <label for="horaEvento">Horário</label>
-              <input
-                id="horaEvento"
-                name="horaEvento"
-                type="time"
-                value="19:00"
-              />
-            </div>
+            <label for="dataEvento">Data</label>
+            <input
+              id="dataEvento"
+              name="dataEvento"
+              type="date"
+              placeholder="Digite a data do evento"
+            />
+          </div>
+
+          <div class="form-row form-row--grid">
+            <label for="horaEvento">Horário</label>
+            <input
+              id="horaEvento"
+              name="horaEvento"
+              type="time"
+              placeholder="Digite a hora do evento"
+            />
           </div>
 
           <div class="form-row">
@@ -65,25 +68,28 @@
               id="localEvento"
               name="localEvento"
               type="text"
-              value="Salão de Festas Elegante"
+              placeholder="Digite o local do evento"
             />
           </div>
 
           <div class="form-row">
-            <label for="anfitriao">Anfitrião</label>
+            <label for="anfitriao">Convidados</label>
             <input
               id="anfitriao"
               name="anfitriao"
               type="text"
-              value="João &amp; Maria"
+              placeholder="Digite o nome dos convidados"
             />
           </div>
 
           <div class="form-row">
             <label for="mensagem">Mensagem (opcional)</label>
-            <textarea id="mensagem" name="mensagem" rows="4">
-Venha celebrar conosco este momento especial!</textarea
-            >
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="4"
+              placeholder="Digite a mensagem de convite"
+            ></textarea>
           </div>
         </form>
       </section>
@@ -93,7 +99,7 @@ Venha celebrar conosco este momento especial!</textarea
         class="card section-templates"
         aria-labelledby="templates-title"
       >
-        <h2 id="templates-title">Escolher Template</h2>
+        <h2 id="templates-title" class="section-title">Escolher Template</h2>
 
         <div class="templates-grid" role="list">
           <button
@@ -143,7 +149,7 @@ Venha celebrar conosco este momento especial!</textarea
         class="card section-download"
         aria-labelledby="download-title"
       >
-        <h2 id="download-title">Baixar Convite</h2>
+        <h2 id="download-title" class="section-title">Baixar Convite</h2>
         <div class="download-controls">
           <button type="button" id="baixarPdf" class="btn btn-primary">
             Baixar PDF
@@ -159,7 +165,7 @@ Venha celebrar conosco este momento especial!</textarea
         class="card section-preview"
         aria-labelledby="preview-title"
       >
-        <h2 id="preview-title">Preview do Convite</h2>
+        <h2 id="preview-title" class="section-title">Preview do Convite</h2>
 
         <div
           class="preview-canvas"
@@ -173,12 +179,12 @@ Venha celebrar conosco este momento especial!</textarea
             </header>
 
             <div class="convite-body">
-              <p class="convite-anfitriao">João &amp; Maria</p>
-              <p class="convite-intro">tem o prazer de convidá-lo(a) para</p>
+              <p class="convite-anfitriao">Convidados</p>
+              <p class="convite-intro">Tem o prazer de convidá-lo(a) para</p>
 
+              <p class="convite-local">Churrasco</p>
               <p class="convite-data">31 de dezembro de 2025</p>
-              <p class="convite-hora">19:00</p>
-              <p class="convite-local">Salão de Festas Elegante</p>
+              <p class="convite-hora">as 19:00</p>
 
               <div class="convite-mensagem">
                 <p>Venha celebrar conosco este momento especial!</p>
@@ -188,12 +194,17 @@ Venha celebrar conosco este momento especial!</textarea
             <footer class="convite-footer" aria-hidden="true"></footer>
           </article>
         </div>
+        <div class="btn-container">
+          <button class="btn btn-primary">Gerar</button>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p class="muted">Criador de Convites — Estrutura HTML</p>
+        <p class="muted">
+          Gerador de convites ©2025 — Todos os direitos reservados
+        </p>
       </div>
     </footer>
   </body>
