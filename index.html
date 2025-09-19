@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gerador de Convites</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">Criador de Convites Personalizados</h1>
+        <p class="site-subtitle">
+          Crie convites personalizados e baixe em PDF ou imagem
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section
+        id="info-evento"
+        class="card section-info-evento"
+        aria-labelledby="info-evento-title"
+      >
+        <h2 id="info-evento-title">Informações do Evento</h2>
+
+        <form id="form-convite" aria-describedby="info-evento-desc">
+          <p id="info-evento-desc" class="sr-only">
+            Preencha os dados do evento para gerar o convite.
+          </p>
+
+          <div class="form-row">
+            <label for="nomeEvento">Nome do Evento</label>
+            <input
+              id="nomeEvento"
+              name="nomeEvento"
+              type="text"
+              value="Minha Festa Especial"
+            />
+          </div>
+
+          <div class="form-row form-row--grid">
+            <div>
+              <label for="dataEvento">Data</label>
+              <input
+                id="dataEvento"
+                name="dataEvento"
+                type="date"
+                value="2024-12-31"
+              />
+            </div>
+            <div>
+              <label for="horaEvento">Horário</label>
+              <input
+                id="horaEvento"
+                name="horaEvento"
+                type="time"
+                value="19:00"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="localEvento">Local</label>
+            <input
+              id="localEvento"
+              name="localEvento"
+              type="text"
+              value="Salão de Festas Elegante"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="anfitriao">Anfitrião</label>
+            <input
+              id="anfitriao"
+              name="anfitriao"
+              type="text"
+              value="João &amp; Maria"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea id="mensagem" name="mensagem" rows="4">
+Venha celebrar conosco este momento especial!</textarea
+            >
+          </div>
+        </form>
+      </section>
+
+      <section
+        id="templates"
+        class="card section-templates"
+        aria-labelledby="templates-title"
+      >
+        <h2 id="templates-title">Escolher Template</h2>
+
+        <div class="templates-grid" role="list">
+          <button
+            type="button"
+            class="template-item"
+            data-template="elegante"
+            role="listitem"
+            aria-pressed="true"
+          >
+            <span class="template-name">Elegante</span>
+          </button>
+
+          <button
+            type="button"
+            class="template-item"
+            data-template="moderno"
+            role="listitem"
+            aria-pressed="false"
+          >
+            <span class="template-name">Moderno</span>
+          </button>
+
+          <button
+            type="button"
+            class="template-item"
+            data-template="criativo"
+            role="listitem"
+            aria-pressed="false"
+          >
+            <span class="template-name">Criativo</span>
+          </button>
+
+          <button
+            type="button"
+            class="template-item"
+            data-template="minimalista"
+            role="listitem"
+            aria-pressed="false"
+          >
+            <span class="template-name">Minimalista</span>
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="download"
+        class="card section-download"
+        aria-labelledby="download-title"
+      >
+        <h2 id="download-title">Baixar Convite</h2>
+        <div class="download-controls">
+          <button type="button" id="baixarPdf" class="btn btn-primary">
+            Baixar PDF
+          </button>
+          <button type="button" id="baixarImg" class="btn btn-outline">
+            Baixar Imagem
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="preview"
+        class="card section-preview"
+        aria-labelledby="preview-title"
+      >
+        <h2 id="preview-title">Preview do Convite</h2>
+
+        <div
+          class="preview-canvas"
+          role="region"
+          aria-label="Preview do convite gerado"
+        >
+          <article class="convite" lang="pt-BR">
+            <header class="convite-header">
+              <h3 class="convite-titulo">Minha Festa Especial</h3>
+              <hr class="convite-divider" />
+            </header>
+
+            <div class="convite-body">
+              <p class="convite-anfitriao">João &amp; Maria</p>
+              <p class="convite-intro">tem o prazer de convidá-lo(a) para</p>
+
+              <p class="convite-data">31 de dezembro de 2025</p>
+              <p class="convite-hora">19:00</p>
+              <p class="convite-local">Salão de Festas Elegante</p>
+
+              <div class="convite-mensagem">
+                <p>Venha celebrar conosco este momento especial!</p>
+              </div>
+            </div>
+
+            <footer class="convite-footer" aria-hidden="true"></footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="muted">Criador de Convites — Estrutura HTML</p>
+      </div>
+    </footer>
+  </body>
+</html>
